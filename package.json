@@ -1,0 +1,29 @@
+{
+  "name": "gha-runners",
+  "version": "0.1.0",
+  "bin": {
+    "gha-runners": "bin/gha-runners.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "biome check",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3",
+    "@octokit/rest": "^21.0.2",
+    "@types/node": "22.5.4",
+    "aws-cdk": "2.158.0",
+    "biome": "^0.3.3",
+    "commander": "^12.1.0",
+    "simple-git": "^3.27.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.2"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.158.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}

@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    runs-on:
+      - codebuild-gha-runners-lambda-${{ github.run_id }}-${{ github.run_attempt }}
+      - instance-size:10GB
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run lint
+        name: Lint
+      - name: Build TypeScript
+        run: npm run build
+      - name: CDK Synth
+        run: npx cdk synth --context githuborg=test
