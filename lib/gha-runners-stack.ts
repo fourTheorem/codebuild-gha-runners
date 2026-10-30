@@ -38,12 +38,17 @@ export class GhaRunnersStack extends cdk.Stack {
     const environmentsBySuffix: Record<string, codebuild.CfnProject.EnvironmentProperty> = {
       '': {
         computeType: 'BUILD_GENERAL1_SMALL',
-        image: 'aws/codebuild/standard:5.0',
+        image: 'aws/codebuild/amazonlinux-x86_64-standard:5.0',
         type: 'LINUX_CONTAINER'
+      },
+      '-arm64': {
+        computeType: 'BUILD_GENERAL1_LARGE',
+        image: 'aws/codebuild/amazonlinux-aarch64-standard:4.0',
+        type: 'ARM_CONTAINER'
       },
       '-lambda': {
         computeType: 'BUILD_LAMBDA_10GB',
-        image: 'aws/codebuild/amazonlinux-x86_64-lambda-standard:nodejs20',
+        image: 'aws/codebuild/amazonlinux-x86_64-lambda-standard:nodejs22',
         type: 'LINUX_LAMBDA_CONTAINER'
       }
     }
