@@ -178,6 +178,7 @@ While creating this, we came across and were inspired by these great resources. 
 
 Also feel free to check out these alternatives solutions for runners!
 
+- [runners.io - Managed GitHub Actions runners](https://runners.io/)
 - [HyperEnv - Self-hosted GitHub runners on AWS](https://hyperenv.com/)
 - [RunsOn - Self-hosted runners on AWS](https://runs-on.com/)
 - [Blacksmith - Managed GitHub runners](https://www.blacksmith.sh/)
